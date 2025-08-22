@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>葉庭豪的履歷表</title>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<style>
+    /* 全域設定 */
+    body {
+        margin: 0;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        background: linear-gradient(to right, #eef2f5, #cfd9e6);
+        line-height: 1.6;
+        color: #333;
+    }
+
+    /* Banner */
+    .banner {
+        position: relative;
+        width: 100%;
+        max-height: 300px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner img {
+        width: 100%;
+        height: auto;
+        filter: brightness(70%);
+        transition: transform 1s ease;
+    }
+    .banner:hover img {
+        transform: scale(1.05);
+    }
+    .banner-text {
+        position: absolute;
+        color: white;
+        font-size: 48px;
+        font-weight: bold;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+        animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn { 0% {opacity:0;} 100% {opacity:1;} }
+
+    h1 { text-align: center; font-size: 42px; margin: 30px 0; }
+
+    /* 履歷區塊 */
+    .resume-container {
+        max-width: 1000px;
+        margin: 40px auto 50px auto;
+        background: rgba(255,255,255,0.95);
+        border-radius: 20px;
+        padding: 50px 60px;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        transition: transform 0.3s;
+    }
+    .resume-container:hover { transform: translateY(-5px); }
+    .resume-container li {
+        font-size: 38px;
+        font-weight: 600;
+        margin-bottom: 18px;
+        color: #1a1a1a;
+    }
+    .resume-container li p {
+        font-size: 23px;
+        color: #444;
+        line-height: 1.8;
+    }
+
+    .english { display: block; margin-top: 10px; }
+
+    ul { list-style-type: none; padding: 0; }
+
+    a { color: #1a73e8; text-decoration: underline; }
+
+    /* 聯繫表單 - 改大版 */
+    .contact-form {
+        max-width: 1000px;      /* 變大 */
+        margin: 50px auto;
+        background: rgba(255,255,255,0.98);
+        border-radius: 25px;
+        padding: 50px 70px;    /* 內距加大 */
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        transition: transform 0.3s;
+    }
+    .contact-form:hover { transform: translateY(-5px); }
+    .contact-form h2 {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+    .contact-form input, 
+    .contact-form textarea {
+        width: 100%;
+        padding: 16px 20px;     /* 變大 */
+        margin-bottom: 25px;
+        border-radius: 12px;
+        border: 1px solid #bbb;
+        font-size: 18px;
+        box-sizing: border-box;
+        transition: border 0.3s, box-shadow 0.3s;
+    }
+    .contact-form input:focus, 
+    .contact-form textarea:focus {
+        border: 1px solid #1a73e8;
+        box-shadow: 0 0 6px #1a73e8;
+        outline: none;
+    }
+    .contact-form button {
+        display: block;
+        width: 100%;
+        padding: 18px;          /* 變大 */
+        background: linear-gradient(135deg,#1a73e8,#4285f4);
+        color: white;
+        font-size: 20px;        /* 變大 */
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .contact-form button:hover {
+        background: linear-gradient(135deg,#155ab6,#3367d6);
+    }
+    .success-message {
+        text-align: center;
+        color: green;
+        font-weight: bold;
+        margin-top: 25px;
+        font-size: 18px;
+    }
+
+    /* 響應式 */
+    @media screen and (max-width: 768px) {
+        .resume-container, .contact-form {
+            padding: 30px 20px;
+            max-width: 95%;
+        }
+        .banner-text { font-size: 32px; }
+        h1 { font-size: 34px; }
+        .contact-form h2 { font-size: 28px; }
+        .contact-form input, .contact-form textarea { font-size: 16px; padding: 12px 15px; }
+        .contact-form button { font-size: 16px; padding: 12px; }
+    }
+</style>
+</head>
+<body>
+
+<!-- Banner -->
+<div class="banner">
+    <img src="frontend_banner_2112x480.png" alt="履歷橫幅">
+    <div class="banner-text">葉庭豪的履歷表</div>
+</div>
+
+<h1>履歷表</h1>
+
+<!-- 履歷內容 -->
+<div class="resume-container">
+    <ul>
+        <li>自我介紹
+            <p>我是一名對程式設計充滿熱情的工程師，畢業於輔仁大學資訊工程學系。在學期間，我積極參與 ITSA 與 CPE 等競賽，並以 C/C++ 作為主要開發語言。畢業後投入一年時間準備資訊工程相關碩士考試，持續精進軟體開發能力。
+            <br>我具備良好的程式設計基礎、快速學習能力，以及對前端開發與網頁設計的高度熱忱。目前正積極進修前端技術（HTML、CSS、JavaScript、React 等），透過實作專案強化實戰能力，樂於接受挑戰，具備問題解決能力與團隊合作精神。</p>
+        </li>
+        <li>學歷
+            <p>輔仁大學 資訊工程學系 | 大學畢業</p>
+        </li>
+        <li>工作經歷
+            <p>大學應屆畢業生，曾經撰寫過購物平台網頁的經驗。<br>工作經歷一年以下</p>
+        </li>
+        <li>求職條件
+            <p>希望性質：全職工作<br>上班時段：日班<br>可上班日：錄取後隨時<br>希望待遇：面議<br>希望地點：桃園市<br>希望職稱：前端工程師<br>希望職類：網頁設計師 / 前端工程師</p>
+        </li>
+        <li>證照
+            <p>機電整合丙級、氣壓丙級</p>
+        </li>
+        <li>語文能力
+            <p>英文：聽/中等 | 說/中等 | 讀/中等 | 寫/略懂</p>
+        </li>
+        <li>自傳
+            <p>我來自桃園，畢業於輔仁大學資訊工程學系。大學畢業後，曾投入一年時間準備攻讀資訊工程碩士班，過程中發現自己更熱衷於動手實作，將想法透過程式語言實現並解決實際問題。在學習與專案歷程中，我體會到程式開發不僅是編寫程式碼，更是解構問題、分析需求、設計高效解法的過程。成功解決棘手問題帶來的成就感，讓我堅定在這條道路前進，也激發對演算法與資料結構的濃厚興趣。</p>
+            <p class="english">
+                I am from Taoyuan and graduated from the Department of Computer Science and Information Engineering at Fu Jen Catholic University. After graduation, I devoted a year to preparing for a master’s degree in computer science. However, through deeper study and reflection, I realized that my true passion lies in hands-on practice—turning ideas into reality through programming and solving real-world problems.
+            </p>
+            <p class="english">
+                Throughout my learning and project experience, I have come to understand that software development is not just about writing code, but also about deconstructing problems, analyzing requirements, and designing efficient solutions. The sense of accomplishment I feel when successfully resolving a challenging issue through programming has strengthened my determination to pursue this path. This experience has also fueled my strong interest in algorithms and data structures, which I continue to explore and refine.
+            </p>
+            <p class="english">
+                In my future career, I aspire to work as a software engineer, front-end engineer, or web developer, combining creativity and technology to deliver products that balance aesthetics and performance, ultimately providing users with better experiences and greater value.
+            </p>
+            <p>查看我的 104 履歷表：<a href="https://pda.104.com.tw/profile/preview?vno=75whttfh2" target="_blank">點此連結</a></p>
+        </li>
+    </ul>
+</div>
+
+<!-- 聯繫表單 -->
+<div class="contact-form">
+    <h2>若對我有興趣! 聯繫我!</h2>
+    <input type="text" id="name" placeholder="您的大名" required>
+    <input type="email" id="email" placeholder="您的 Email" required>
+    <textarea id="message" placeholder="想對我說的話" rows="6" required></textarea>
+    <button id="sendBtn">送出訊息</button>
+    <div class="success-message" id="successMessage"></div>
+</div>
+
+<script>
+    // 初始化 EmailJS
+    emailjs.init("bp6-8_1tO3kGcBHW0"); // <- 改成你的 Public Key
+
+    document.getElementById('sendBtn').addEventListener('click', function() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        emailjs.send("service_rkmy4rm", "template_380nenp", {
+            name: name,
+            email: email,
+            message: message
+        })
+        .then(function() {
+            document.getElementById('successMessage').innerText = "訊息已成功送出！";
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+        }, function(error) {
+            document.getElementById('successMessage').innerText = "寄送失敗，請稍後再試。";
+            console.log('FAILED...', error);
+        });
+    });
+</script>
+
+</body>
+</html>
