@@ -157,6 +157,16 @@
 <!-- 履歷內容 -->
 <div class="resume-container">
     <ul>
+        h3>播放音樂</h3>
+            <audio id="bgMusic" controls>
+        <source src="./music.mp3" type="audio/mpeg">
+        妳的瀏覽器不支援音樂
+            </audio>
+
+        <script>
+            const music = document.getElementById('bgMusic');
+            music.volume = 0.3; // 音量 0.0 ~ 1.0，0.5 為一半音量
+        </script>
         <li>自我介紹
             <p>我是一名對程式設計充滿熱情的工程師，畢業於輔仁大學資訊工程學系。在學期間，我積極參與 ITSA 與 CPE 等競賽，並以 C/C++ 作為主要開發語言。畢業後投入一年時間準備資訊工程相關碩士考試，持續精進軟體開發能力。
             <br>我具備良好的程式設計基礎、快速學習能力，以及對前端開發與網頁設計的高度熱忱。目前正積極進修前端技術（HTML、CSS、JavaScript、React 等），透過實作專案強化實戰能力，樂於接受挑戰，具備問題解決能力與團隊合作精神。</p>
@@ -230,3 +240,4 @@
 
 </body>
 </html>
+
